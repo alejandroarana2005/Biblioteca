@@ -1,5 +1,7 @@
-import java.util.List;
+package org.yourcompany.yourproject;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Libro {
   
@@ -14,10 +16,10 @@ public class Libro {
     }
 
     public Ejemplar crearEjemplar(String codigo) {
-        Ejemplar nuevoEjemplar = new Ejemplar(codigo);
-        ejemplares.add(nuevoEjemplar);
-        return nuevoEjemplar;
-    }
+    Ejemplar nuevo = new Ejemplar(codigo, this);
+    ejemplares.add(nuevo);
+    return nuevo;
+}
 
     
     public String getTitulo() {
