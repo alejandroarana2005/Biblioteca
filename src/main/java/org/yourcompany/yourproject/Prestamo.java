@@ -1,20 +1,14 @@
 package org.yourcompany.yourproject;
 
-/**
- * Clase que representa un préstamo de libros en la biblioteca
- */
+
 public class Prestamo {
     
     // Atributos
     private Socio socio;
     private Ejemplar[] ejemplares;
     
-    /**
-     * Constructor de la clase Prestamo
-     * 
-     * @param socio El socio que realiza el préstamo
-     * @param ejemplares Arreglo de ejemplares que se prestan
-     */
+    // Cosntructor
+
     public Prestamo(Socio socio, Ejemplar[] ejemplares) {
         this.socio = socio;
         this.ejemplares = ejemplares;
@@ -29,12 +23,16 @@ public class Prestamo {
         return ejemplares;
     }
     
-    // Setters
-    public void setSocio(Socio socio) {
-        this.socio = socio;
+    /**
+     * Notifica la creación del préstamo utilizando el notificador proporcionado
+     * 
+     * @param notificador El notificador que se utilizará para enviar la notificación
+     */
+    public void NotificarCreación(Notificador notificador) {
+        String destino = socio.getEmail();
+        String mensaje = "Se ha registrado un préstamo a nombre de: " + socio.getNombre() + 
+                         " con " + ejemplares.length + " ejemplars";
+        notificador.enviar(destino, mensaje);
     }
-    
-    public void setEjemplares(Ejemplar[] ejemplares) {
-        this.ejemplares = ejemplares;
-    }
+
 }
