@@ -12,6 +12,40 @@ public class Socio extends Usuario {
         multasPendientes = 0;
     }
 
+    public String getId() {
+        return this.id;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public int getLimiteEjemplares() {
+        return limiteEjemplares;
+    }
+
+    public int getEjemplaresEnPrestamo() {
+        return ejemplaresEnPrestamo;
+    }
+
+    public double getMultasPendientes() {
+        return multasPendientes;
+    }
+
+    public void agregarMulta(double monto) {
+        multasPendientes += monto;
+    }
+
+    public boolean puedePedirPrestamo() {
+        return (ejemplaresEnPrestamo < limiteEjemplares) && (multasPendientes == 0);
+    }
+
+
+
     public void registrarPrestamo(Prestamo prestamo) {
         int cantidadEjemplares = prestamo.getEjemplares().length;
         

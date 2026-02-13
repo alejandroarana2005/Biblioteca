@@ -23,15 +23,11 @@ public class Prestamo {
         return ejemplares;
     }
     
-    /**
-     * Notifica la creación del préstamo utilizando el notificador proporcionado
-     * 
-     * @param notificador El notificador que se utilizará para enviar la notificación
-     */
+   
     public void NotificarCreación(Notificador notificador) {
         String destino = socio.getEmail();
         String mensaje = "Se ha registrado un préstamo a nombre de: " + socio.getNombre() + 
-                         " con " + ejemplares.length + " ejemplars";
+                         " con " + ejemplares.length + " ejemplares";
         notificador.enviar(destino, mensaje);
     }
 
