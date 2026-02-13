@@ -10,19 +10,7 @@ public class Socio extends Usuario {
         this.limiteEjemplares = limiteEjemplares;
         ejemplaresEnPrestamo = 0;
         multasPendientes = 0;
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
+    } 
 
     public int getLimiteEjemplares() {
         return limiteEjemplares;
@@ -46,17 +34,17 @@ public class Socio extends Usuario {
 
 
 
-    public void registrarPrestamo(Prestamo prestamo) {
-        int cantidadEjemplares = prestamo.getEjemplares().length;
+    public void registrarPrestamo(int cantidad) {
         
-        if(cantidadEjemplares > (limiteEjemplares - ejemplaresEnPrestamo)) {
+        
+        if(cantidad > (limiteEjemplares - ejemplaresEnPrestamo)) {
             throw new IllegalArgumentException("Supera el limite del socio");
         }
         if(multasPendientes > 0) {
             throw new IllegalArgumentException("No puede pedir si tiene una multa");
         }
         
-        ejemplaresEnPrestamo += cantidadEjemplares;
-        System.out.println("Se prestaron " + cantidadEjemplares + " libros al socio: " + this.getNombre());
+        ejemplaresEnPrestamo += cantidad;
+        System.out.println("Se prestaron " + cantidad + " libros al socio: " + this.darNombre());
     }
 }

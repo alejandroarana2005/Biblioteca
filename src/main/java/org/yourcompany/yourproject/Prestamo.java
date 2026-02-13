@@ -25,8 +25,8 @@ public class Prestamo {
     
    
     public void NotificarCreación(Notificador notificador) {
-        String destino = socio.getEmail();
-        String mensaje = "Se ha registrado un préstamo a nombre de: " + socio.getNombre() + 
+        String destino = socio.darEmail();
+        String mensaje = "Se ha registrado un préstamo a nombre de: " + socio.darNombre() + 
                          " con " + ejemplares.length + " ejemplares";
         notificador.enviar(destino, mensaje);
     }

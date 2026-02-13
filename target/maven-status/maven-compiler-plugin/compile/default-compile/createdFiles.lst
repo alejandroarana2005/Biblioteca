@@ -1,5 +1,10 @@
 org\yourcompany\yourproject\Bibliotecario.class
 org\yourcompany\yourproject\Biblioteca.class
-org\yourcompany\yourproject\Usuario.class
+org\yourcompany\yourproject\Ejemplar.class
 org\yourcompany\yourproject\Socio.class
+org\yourcompany\yourproject\Usuario.class
+org\yourcompany\yourproject\EmailNotificador.class
+org\yourcompany\yourproject\Prestamo.class
 org\yourcompany\yourproject\Main.class
+org\yourcompany\yourproject\Notificador.class
+org\yourcompany\yourproject\SmsNotificador.class
