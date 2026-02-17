@@ -6,6 +6,12 @@ package org.yourcompany.yourproject;
 /**
  *
  * @author Unibague
+ * 
+ * Alejandro Arana Fernandez - 2220232039
+ * Jhoan Ortiz Parra - 2220231054
+ * Sergio Andres Martinez Aroca - 2220231060
+ * Juan Miguel Robayo Diaz - 2220232004
+ * 
  */
 public class Main {
 
